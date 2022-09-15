@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">basicui</string>
+    <string name="get_random_image">Get random image</string>
+    <string name="get_hello">Hello, user</string>
+    <string name="enter_image_keyword">Enter image keyword</string>
+    <string name="use_keyword">Use keyword</string>
+    <string name="none">None</string>
+    <string name="space">Space</string>
+    <string name="water">Water</string>
+    <string name="animals">Animals</string>
+    <string name="cat">Cat</string>
+</resources>
