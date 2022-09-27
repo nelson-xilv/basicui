@@ -11,25 +11,27 @@
         android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_android_black_24dp"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="12dp"
         android:contentDescription="@string/app_name"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_android_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/keywordRadioGroup" />
+        app:layout_constraintVertical_bias="0.496"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <RadioGroup
         android:id="@+id/keywordRadioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:orientation="horizontal"
         android:checkedButton="@id/catRadioButton"
-        app:layout_constraintStart_toStartOf="@id/imageView"
-        app:layout_constraintEnd_toEndOf="@id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintBottom_toTopOf="@id/buttonMain"
         android:layout_marginTop="6dp">
 
         <RadioButton
@@ -63,9 +65,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/get_random_image"
+        app:layout_constraintEnd_toEndOf="@+id/keywordRadioGroup"
         app:layout_constraintStart_toStartOf="@id/keywordRadioGroup"
-        app:layout_constraintEnd_toEndOf="@id/keywordRadioGroup"
-        app:layout_constraintTop_toBottomOf="@id/keywordRadioGroup"/>
+        app:layout_constraintTop_toBottomOf="@id/keywordRadioGroup" />
 
     <ProgressBar
         android:id="@+id/progressBar"

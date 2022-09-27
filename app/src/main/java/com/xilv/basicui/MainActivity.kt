@@ -4,9 +4,7 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.RadioButton
-import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -16,15 +14,15 @@ import com.bumptech.glide.request.target.Target
 import com.xilv.basicui.databinding.ActivityMainBinding
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
         setContentView(binding.root)
 
         binding.buttonMain.setOnClickListener {
@@ -61,6 +59,7 @@ class MainActivity : AppCompatActivity() {
                 }
             })
             .into(binding.imageView)
+
         return false
     }
 
